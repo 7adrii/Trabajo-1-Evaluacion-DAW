@@ -1,0 +1,93 @@
+body {
+    width: 98%;
+    height: 97vh;
+    background-image: url(../img/i8.jpg);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: flex;
+    margin: 0;
+}
+
+.header nav{
+    position: fixed;
+    right: 75px;
+    top: 50%;
+    transform: translateY(-50%) translateX(120%);
+    width: 500px; /* Tamaño*/
+    background: rgba(0, 0, 0, 0.45); /* Color de fondo semitransparente */
+    color: #fff; /* Color fuente */
+    border-radius: 12px;
+    padding: 14px; /* Espaciado interno */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.45); /* Sombra */
+    backdrop-filter: blur(6px) saturate(120%); /* Desenfoque */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: slideInFromRight 1.5s cubic-bezier(.2,.9,.2,1) .15s forwards;
+}
+
+.header nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.header nav li{
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    font-weight: 600;
+    font-size: 2rem;
+    cursor:pointer;
+    transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+}
+
+.header nav li:hover{
+    transform: translateX(-8px);
+}
+
+@keyframes slideInFromRight{
+    from{
+        transform: translateY(-50%) translateX(120%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(-50%) translateX(0);
+        opacity: 1;
+    }
+}
+
+/*Movil*/
+
+@media (max-width: 720px){
+
+    body {
+        background-position: left;
+    }
+
+    .header nav{
+        right: 12px;
+        left: 12px;
+        top: auto;
+        bottom: 16px;
+        width: auto;
+        transform: translateY(0) translateX(120%);
+        flex-direction: row;
+        gap: 8px;
+        padding: 10px;
+        animation: slideUpFromBottom .6s cubic-bezier(.2,.9,.2,1) .12s forwards;
+    }
+    
+    .header nav ul{ flex-direction: row; gap: 8px; overflow-x: auto; }
+    .header nav li{ white-space: nowrap; }
+    
+    @keyframes slideUpFromBottom{
+        from{ transform: translateY(18px) translateX(0); opacity: 0; }
+        to{ transform: translateY(0) translateX(0); opacity: 1; }
+    }
+}
