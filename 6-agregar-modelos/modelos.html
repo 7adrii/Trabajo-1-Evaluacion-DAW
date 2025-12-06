@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Modelos</title>
+    <link rel="stylesheet" href="modelos.css">
+    <script src="modelos.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Agregar Nuevos Modelos</h1>
+        <div class="formulario-seccion">
+            <form id="formulario">
+                <div class="form-grupo">
+                    <label for="marca">Marca:</label>
+                    <input type="text" id="marca" required placeholder="Ingresa la marca del coche">
+                </div>
+
+                <div class="form-grupo">
+                    <label for="modelo">Modelo:</label>
+                    <input type="text" id="modelo" required placeholder="Ingresa el modelo del coche">
+                </div>
+
+                <div class="form-grupo">
+                    <label for="potencia">Potencia:</label>
+                    <input type="text" id="potencia" required placeholder="Ingresa la potencia del coche">
+                </div>
+
+                <div class="form-grupo">
+                    <label for="precio">Precio:</label>
+                    <input type="text" id="precio" required placeholder="Ingresa el precio del coche">
+                </div>
+
+                <div class="form-grupo">
+                    <label for="fechaLanzamiento">Fecha de lanzamiento:</label>
+                    <input type="date" id="fechaLanzamiento" required placeholder="Ingresa la fecha de lanzamiento del coche">
+                </div>
+
+                <div class="form-grupo">
+                    <label for="transmision">Transmisión:</label>
+                    <input type="radio" id="Automatico" name="modo-opcion">Automatico
+                    <input type="radio" id="Manual" name="modo-opcion">Manual
+                </div>
+
+                <div class="form-grupo">
+                    <label for="imagen">URL de la Imagen:</label>
+                    <input type="url" id="imagen" required placeholder="https://ejemplo.com/imagen.jpg">
+                </div>
+
+                <button type="submit">Agregar Tarjeta</button>
+            </form>
+        </div>
+
+        <div class="tarjetas-contenedor" id="tarjetas"></div>
+    </div>
+
+</body>
+</html>
