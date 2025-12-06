@@ -1,0 +1,104 @@
+body {
+    width: 98%;
+    height: 97vh;
+    background-image: url(../img/revuelto.avif);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: flex;
+    margin: 0;
+}
+
+.header nav{
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%) translateY(120%);
+    width: 90%;
+    height: 14%;
+    background: linear-gradient(135deg, rgba(50, 205, 50, 0.42), rgba(0, 128, 0, 0.12));
+    border-radius: 12px;
+    padding: 8px 14px; 
+    box-shadow: 0 8px 24px rgba(50, 205, 50, 0.18);
+    backdrop-filter: blur(6px) saturate(110%); 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    animation: slideInFromBottom 1.2s cubic-bezier(.2,.9,.2,1) .12s forwards;
+}
+
+.header nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header nav li{
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(50, 205, 50, 0.08), rgba(50, 205, 50, 0.03));
+    font-weight: 600;
+    font-size: 1.8em;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    min-width: 110px;
+    transition: transform .18s cubic-bezier(.2,.9,.2,1), box-shadow .18s ease, background .18s ease;
+}
+
+.header nav li small{
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #444;
+}
+
+.header nav li:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+    background: linear-gradient(180deg, rgba(50, 205, 50, 0.28), rgba(50, 205, 50, 0.2));
+}
+@keyframes slideInFromBottom{
+    from{
+        transform: translateX(-50%) translateY(120%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+/*Movil*/
+
+@media (max-width: 720px){
+
+    .header nav{
+        right: 12px;
+        left: 12px;
+        bottom: 16px;
+        transform: translateY(0) translateX(120%);
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+        animation: slideUpFromBottom .6s cubic-bezier(.2,.9,.2,1) .12s forwards;
+    }
+
+    .header nav ul{ flex-direction: row; gap: 8px; overflow-x: auto; }
+    .header nav li{font-size: 1rem; }
+
+    @keyframes slideUpFromBottom{
+        from{ transform: translateY(18px) translateX(0); opacity: 0; }
+        to{ transform: translateY(0) translateX(0); opacity: 1; }
+    }
+}
