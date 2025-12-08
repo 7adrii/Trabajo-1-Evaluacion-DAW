@@ -1,6 +1,7 @@
-const formulario = document.getElementById('formulario');
-const contenedorTarjetas = document.getElementById('tarjetas');
-formulario.addEventListener('submit', function(e) {
+document.addEventListener('DOMContentLoaded', function() {
+    const formulario = document.getElementById('formulario');
+    const contenedorTarjetas = document.getElementById('tarjetas');
+    formulario.addEventListener('submit', function(e) {
     e.preventDefault();
     const marca = document.getElementById('marca').value;
     const modelo = document.getElementById('modelo').value;
@@ -22,9 +23,11 @@ formulario.addEventListener('submit', function(e) {
             <button class="tarjeta-eliminar">Eliminar</button>
         </div>
     `;
-    tarjeta.querySelector('.tarjeta-eliminar').addEventListener('click', function() {
-        tarjeta.remove();
-    });
-    contenedorTarjetas.appendChild(tarjeta);
-    formulario.reset();
+        tarjeta.querySelector('.tarjeta-eliminar').addEventListener('click', function() {
+            tarjeta.remove();
+        });
+        contenedorTarjetas.appendChild(tarjeta);
+        formulario.reset();
+        });
 });
+
