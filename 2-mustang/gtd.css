@@ -87,6 +87,10 @@ body {
         animation: slideUpFromBottom .6s cubic-bezier(.2,.9,.2,1) .12s forwards;
     }
 
+    .ocultar{
+        visibility: hidden;
+    }
+
     .header nav ul{ flex-direction: row; gap: 8px; overflow-x: auto; }
     .header nav li{ white-space: nowrap; }
 
@@ -95,3 +99,5 @@ body {
         to{ transform: translateY(0) translateX(0); opacity: 1; }
     }
 }
+
+
