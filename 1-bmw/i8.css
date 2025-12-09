@@ -85,7 +85,7 @@ body {
 
     .ocultar{
         visibility: hidden;
-        
+
     }
     
     .header nav ul{ flex-direction: row; gap: 8px; overflow-x: auto; }
@@ -96,3 +96,4 @@ body {
         to{ transform: translateY(0) translateX(0); opacity: 1; }
     }
 }
+
