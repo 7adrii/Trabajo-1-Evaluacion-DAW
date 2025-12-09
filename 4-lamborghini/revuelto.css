@@ -15,8 +15,8 @@ body {
     left: 50%;
     bottom: 28px;
     transform: translateX(-50%) translateY(120%);
-    width: 90%;
-    height: 14%;
+    width: 85%;
+    height: 11%;
     background: linear-gradient(135deg, rgba(50, 205, 50, 0.42), rgba(0, 128, 0, 0.12));
     border-radius: 12px;
     padding: 8px 14px; 
@@ -92,6 +92,10 @@ body {
         gap: 8px;
         align-items: center;
         animation: slideUpFromBottom .6s cubic-bezier(.2,.9,.2,1) .12s forwards;
+    }
+
+    .ocultar{
+        visibility: hidden;
     }
 
     .header nav ul{ flex-direction: row; gap: 8px; overflow-x: auto; }

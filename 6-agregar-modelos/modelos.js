@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const fechaLanzamiento = document.getElementById('fechaLanzamiento').value;
     const transmision = document.querySelector('input[name="modo-opcion"]:checked').id;
     const imagen = document.getElementById('imagen').value;
+    const color = document.getElementById('color').value;
     const tarjeta = document.createElement('div');
     tarjeta.className = 'tarjeta';
     tarjeta.innerHTML = `
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="tarjeta-detalles">Precio: ${precio}</div>
             <div class="tarjeta-detalles">Fecha de lanzamiento: ${fechaLanzamiento}</div>
             <div class="tarjeta-detalles">Transmisión: ${transmision}</div>
+            <div class="tarjeta-detalles">Color: ${color}</div>
             <button class="tarjeta-eliminar">Eliminar</button>
         </div>
     `;
